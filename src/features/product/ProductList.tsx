@@ -28,7 +28,8 @@ export function ProductList() {
 						color: "#eeeeee"
 					}}
 					margin="normal"
-					// label="Search"
+					label="Search"
+					hiddenLabel={true}
 					variant="outlined"
 					placeholder="Search for products"
 					InputLabelProps={{

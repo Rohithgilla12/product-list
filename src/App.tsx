@@ -17,12 +17,14 @@ function App() {
 								flexGrow: 1,
 							}}>
 								<Link to="/">
-									Balaji Pharma Distributors Product List
+									BPD Products
 								</Link>
 							</Typography>
-							<Link to="/search" color="inherit">
-								Search
+							<Typography variant="subtitle1">
+								<Link to="/search">
+									All Products search
 							</Link>
+							</Typography>
 						</Toolbar>
 					</AppBar>
 					<Switch>

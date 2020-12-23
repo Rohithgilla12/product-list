@@ -21,6 +21,8 @@ export function SearchAll() {
 					margin="normal"
 					variant="outlined"
 					placeholder="Search for all products"
+					label="Search all"
+					hiddenLabel={true}
 					InputLabelProps={{
 						shrink: true,
 					}}

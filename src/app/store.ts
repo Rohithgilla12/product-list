@@ -1,50 +1,48 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
 import logger from 'redux-logger'
 import {
-  persistStore,
-  persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER
+	persistStore,
+	persistReducer,
+	FLUSH,
+	REHYDRATE,
+	PAUSE,
+	PERSIST,
+	PURGE,
+	REGISTER
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import counterReducer from '../features/counter/counterSlice';
 import companyReducer from '../features/company/companySlice';
 import productReducer from '../features/product/productSlice';
 
 const persistConfig = {
-  key: 'root',
-  version: 1,
-  storage
+	key: 'root',
+	version: 1,
+	storage
 }
 
 const rootReducer = combineReducers({
-  counter: counterReducer,
-  company: companyReducer,
-  product: productReducer,
+	company: companyReducer,
+	product: productReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
-  reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
-    }
-  }).concat(logger),
-  devTools: process.env.NODE_ENV !== 'production',
+	reducer: persistedReducer,
+	middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+		serializableCheck: {
+			ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+		}
+	}).concat(logger),
+	devTools: process.env.NODE_ENV !== 'production',
 });
 
 export let persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
+	ReturnType,
+	RootState,
+	unknown,
+	Action<string>
 >;
