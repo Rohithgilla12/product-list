@@ -5,10 +5,10 @@ This project is for DO Hackathon
 
 ## Dev.to articles 
 
-[Introduction] (https://dev.to/gillarohith/do-hackathon-introduction-1hcd)
+[Introduction](https://dev.to/gillarohith/do-hackathon-introduction-1hcd)
 
-[Data Processing] (https://dev.to/gillarohith/do-hackathon-data-processing-1kfk)
+[Data Processing](https://dev.to/gillarohith/do-hackathon-data-processing-1kfk)
 
-[Web Application] (https://dev.to/gillarohith/do-hackathon-web-application-59h)
+[Web Application](https://dev.to/gillarohith/do-hackathon-web-application-59h)
 
-[Search] (https://dev.to/gillarohith/do-hackathon-search-mkf)
+[Search](https://dev.to/gillarohith/do-hackathon-search-mkf)
