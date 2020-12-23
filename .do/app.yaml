@@ -1,0 +1,22 @@
+name: product-list
+region: nyc
+static_sites:
+- build_command: yarn build
+  environment_slug: node-js
+  envs:
+  - key: REACT_APP_ALGOLIA_APP_ID
+    scope: BUILD_TIME
+    value: APP_ID
+  - key: REACT_APP_ALGOLIA_API_KEY
+    scope: BUILD_TIME
+    value: API_KEY
+  - key: REACT_APP_ALGOLIA_INDEX_NAME
+    scope: BUILD_TIME
+    value: INDEX_NAME
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: Rohithgilla12/product-list
+  name: product-list
+  routes:
+  - path: /

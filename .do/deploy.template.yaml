@@ -1,0 +1,9 @@
+spec:
+  name: product-list
+  services:
+  - build_command: yarn build
+    environment_slug: node-js
+    git:
+      branch: main
+      repo_clone_url: https://github.com/Rohithgilla12/product-list.git
+    name: product-list
